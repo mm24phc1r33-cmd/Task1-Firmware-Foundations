@@ -76,9 +76,6 @@ vs code
 
 Step-4: Clone Repository
 
-git clone https://github.com/vsdip/vsdsquadron-mini-core
-
-cd vsdsquadron-mini-core
 
 <img width="743" height="444" alt="Screenshot 2026-01-12 144942" src="https://github.com/user-attachments/assets/b25f3697-c3a2-4b4a-a66a-52a54d5f3106" />
 
