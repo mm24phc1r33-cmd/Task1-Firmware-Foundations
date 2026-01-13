@@ -3,62 +3,64 @@ Task1:
 Part A: Understanding Firmware Libraries (Conceptual)
 1. What is Embedded Firmware?
 
-Embedded firmware is a low-level software written to directly control hardware components of an embedded system such as GPIO, timers, UART, SPI, etc. It runs on microcontrollers or SoCs and is responsible for initializing hardware, handling inputs/outputs, and executing real-time tasks.
+*Embedded firmware is a low-level software written to directly control hardware components of an embedded system such as GPIO, timers, UART, SPI, etc. It runs on microcontrollers or SoCs and is responsible for initializing hardware, handling inputs/outputs, and executing real-time tasks.
 
-Difference between Application Code and Firmware:
+*Difference between Application Code and Firmware:
 
-Application code runs on PCs or mobile devices and interacts with users.
+*Application code runs on PCs or mobile devices and interacts with users.
 
-Firmware runs inside embedded hardware and directly interacts with registers and peripherals.
+*Firmware runs inside embedded hardware and directly interacts with registers and peripherals.
 
-Role of Firmware:
-Firmware acts as a bridge between hardware and higher-level logic, ensuring reliable and efficient hardware operation.
+*Role of Firmware:
+*Firmware acts as a bridge between hardware and higher-level logic, ensuring reliable and efficient hardware operation.
 
 2. What is a Firmware Library / API?
 
-A firmware library is a collection of reusable functions (APIs) that simplify hardware access.
+*A firmware library is a collection of reusable functions (APIs) that simplify hardware access.
 
-Examples of APIs:
+*Examples of APIs:
 
+```bash
 digitalWrite()
 delay()
 Serial.write()
+```
 
 
-Why APIs are used:
+*Why APIs are used:
 
-Hide register-level complexity
+*Hide register-level complexity
 
-Improve code readability
+*Improve code readability
 
-Enable code reuse
+*Enable code reuse
 
-Reduce development time
+*Reduce development time
 
-Industry-standard approach
+*Industry-standard approach
 
 3. What is Bare-Metal Firmware?
 
-Bare-metal firmware runs directly on hardware without any OS or RTOS.
+*Bare-metal firmware runs directly on hardware without any OS or RTOS.
 
-Characteristics:
+*Characteristics:
 
-No scheduler or OS services
+*No scheduler or OS services
 
-Developer manages timing and interrupts
+*Developer manages timing and interrupts
 
-Direct hardware control
+*Direct hardware control
 
-High efficiency and low latency
+*High efficiency and low latency
 
-Why RTOS is not used here:
-This internship focuses on understanding fundamentals of firmware and hardware interaction before introducing RTOS concepts.
+*Why RTOS is not used here:
+*This internship focuses on understanding fundamentals of firmware and hardware interaction before introducing RTOS concepts.
 
 PART-B: DEVELOPMENT ENVIRONMENT (SCREENSHOTS REQUIRED)
 
 Step-1: Git Installation
 
-git --version
+*git --version
 
 
 <img width="745" height="442" alt="Screenshot 2026-01-12 105944" src="https://github.com/user-attachments/assets/70c87a81-03e8-4e6f-9ee4-6543ed14ba3c" />
@@ -66,13 +68,13 @@ git --version
 
 Step-2: GCC Installation
 
-gcc --version
+*gcc --version
 
 <img width="749" height="442" alt="Screenshot 2026-01-12 112326" src="https://github.com/user-attachments/assets/61baa1d0-f7af-4ebb-9929-9602c703cfa0" />
 
 Step-3: Code Editor
 
-vs code 
+*vs code 
 
 <img width="1920" height="1080" alt="Screenshot 2026-01-12 113337" src="https://github.com/user-attachments/assets/133597da-d0e2-4ed4-95c1-c924fccec7bd" />
 
@@ -87,13 +89,13 @@ Step-4: Clone Repository
 
 ## Part C: Firmware Library Usage & Explanation
 
-This section explains how the firmware-style library is structured and how it is used in the application code.
+*This section explains how the firmware-style library is structured and how it is used in the application code.
 
 ---
 
 ## 1. Project Structure
 
-The project is divided into separate source and header files to follow a firmware library style.
+*The project is divided into separate source and header files to follow a firmware library style.
 
 ```bash
 task1/
@@ -113,11 +115,11 @@ task1/
 
 ##-gpio.c
 
-Implements the functions declared in gpio.h
+*Implements the functions declared in gpio.h
 
-Contains the actual logic of GPIO operations
+*Contains the actual logic of GPIO operations
 
-Represents a firmware-style driver layer
+*Represents a firmware-style driver layer
 ```bash
 #include <stdio.h>
 #include "gpio.h"
@@ -148,7 +150,7 @@ int gpio_read(int pin)
 }
 ```
 
--gpio.h
+*gpio.h
 ```bash
 #ifndef GPIO_H
 #define GPIO_H
@@ -167,7 +169,7 @@ int  gpio_read(int pin);
 #endif
 ```
 
--main.c
+*main.c
 ```bash
 #include <stdio.h>
 #include "gpio.h"
@@ -194,7 +196,7 @@ int main(void)
     return 0;
 }
 ```
--README.md
+*README.md
 ```bash
 # Task 1: Firmware Library Fundamentals
 
@@ -272,50 +274,50 @@ Console messages simulating GPIO behavior.
 
 ## Important
 
-This task sets the foundation for all upcoming hardware and firmware work.
-Incomplete understanding here **will cause difficulties in later tasks**.
+*This task sets the foundation for all upcoming hardware and firmware work.
+*Incomplete understanding here **will cause difficulties in later tasks**.
 
 3. Application Code (main.c)
 
-main.c includes gpio.h
+*main.c includes gpio.h
 
-It does NOT directly access hardware logic
+*It does NOT directly access hardware logic
 
-Uses GPIO functions through APIs
+*Uses GPIO functions through APIs
 
-Example flow:
+*Example flow:
 
-Initialize GPIO
+*Initialize GPIO
 
-Set a GPIO pin
+*Set a GPIO pin
 
-Reset a GPIO pin
+*Reset a GPIO pin
 
-This shows proper abstraction between application and driver layers.
+*This shows proper abstraction between application and driver layers.
 
 4. Why This Structure Is Used in Firmware
 
-Improves code readability
+*Improves code readability
 
-Makes code reusable
+*Makes code reusable
 
-Separates hardware logic from application logic
+*Separates hardware logic from application logic
 
-Follows real embedded firmware development practices
+*Follows real embedded firmware development practices
 
-This structure is similar to how drivers and HAL libraries are used in microcontroller-based systems.
+*This structure is similar to how drivers and HAL libraries are used in microcontroller-based systems.
 
 5. Conclusion
 
-This task demonstrates:
+*This task demonstrates:
 
-How firmware libraries are structured
+*How firmware libraries are structured
 
-How APIs are used in application code
+*How APIs are used in application code
 
-Basic understanding of driver and application separation
+*Basic understanding of driver and application separation
 
-The project successfully simulates a firmware-style library without requiring actual hardware.
+*The project successfully simulates a firmware-style library without requiring actual hardware.
 
 
 
