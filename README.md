@@ -263,6 +263,8 @@ Console messages simulating GPIO behavior.
 
    * Successful compilation
    * Program output
+   <img width="1920" height="993" alt="Screenshot 2026-01-13 210959" src="https://github.com/user-attachments/assets/0bf1bcd3-8940-4757-9743-3c57f53fe9d8" />
+
 
 3. GitHub repository link (forked or personal)
 
