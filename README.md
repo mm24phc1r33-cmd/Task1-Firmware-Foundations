@@ -1,3 +1,6 @@
+Task1:
+
+Part A: Understanding Firmware Libraries (Conceptual)
 1. What is Embedded Firmware?
 
 Embedded firmware is a low-level software written to directly control hardware components of an embedded system such as GPIO, timers, UART, SPI, etc. It runs on microcontrollers or SoCs and is responsible for initializing hardware, handling inputs/outputs, and executing real-time tasks.
