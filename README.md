@@ -84,7 +84,6 @@ cd vsdsquadron-mini-core
 
 <img width="752" height="451" alt="Screenshot 2026-01-12 151657" src="https://github.com/user-attachments/assets/a407d049-3997-463f-aeb4-73908edbe6a3" />
 
-Part C – Understanding & Using Firmware-Style Library
 
 ## Part C: Firmware Library Usage & Explanation
 
@@ -96,6 +95,7 @@ This section explains how the firmware-style library is structured and how it is
 
 The project is divided into separate source and header files to follow a firmware library style.
 
+```bash
 task1/
 
 │── main.c
@@ -105,12 +105,13 @@ task1/
 │── gpio.h
 
 │── README.md
+```
 
 <img width="1920" height="1015" alt="Screenshot 2026-01-13 115257" src="https://github.com/user-attachments/assets/f0703993-98b7-4c91-ba6b-189c2d7e0699" />
 <img width="1920" height="1007" alt="Screenshot 2026-01-13 121721" src="https://github.com/user-attachments/assets/3c59969f-7417-4886-a757-af63d6619b78" />
 
 
--gpio.c
+##-gpio.c
 
 Implements the functions declared in gpio.h
 
