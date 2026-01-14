@@ -113,7 +113,9 @@ task1/
 <img width="1920" height="1007" alt="Screenshot 2026-01-13 121721" src="https://github.com/user-attachments/assets/3c59969f-7417-4886-a757-af63d6619b78" />
 
 
-##-gpio.c
+
+
+*gpio.c
 
 *Implements the functions declared in gpio.h
 
