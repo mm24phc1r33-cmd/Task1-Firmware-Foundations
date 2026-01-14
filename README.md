@@ -271,6 +271,7 @@ Console messages simulating GPIO behavior.
 
 
 3. GitHub repository link (forked or personal)
+   https://github.com/mm24phc1r33-cmd/Task1-Firmware-Foundations/edit/main/README.md
 
 ---
 
