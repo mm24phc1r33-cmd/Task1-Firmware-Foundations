@@ -23,12 +23,12 @@ int main(void)
         // Check whether the counter has reached 10 or not
         if (counter <= 10)
         {
-            gpio_toggle(); // LED blink h
+            gpio_toggle(); // LED blink 
 
             sprintf(buffer, "Counter = %lu\r\n", counter++);
             uart_print(buffer);
 
-            Delay_ms(500); // 0.5 second ka delay
+            Delay_ms(500); // 0.5 second delay
         }
         else
         {
