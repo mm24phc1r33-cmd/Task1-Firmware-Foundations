@@ -6,10 +6,11 @@ void uart_init(void)
     GPIO_InitTypeDef gpio;
     USART_InitTypeDef uart;
 
-    // PD5 aur USART1 ki clock enable karein
+    // PD5 aur USART1 clock enable 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_USART1, ENABLE);
 
-    // TX Pin setup: VSD Squadron Mini ke liye PD5 use hota hai
+   // TX pin setup: PD5 is used for the VSD Squadron Mini
+
     gpio.GPIO_Pin = GPIO_Pin_5;
     gpio.GPIO_Mode = GPIO_Mode_AF_PP;
     gpio.GPIO_Speed = GPIO_Speed_50MHz;
