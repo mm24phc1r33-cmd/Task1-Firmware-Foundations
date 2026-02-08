@@ -20,10 +20,10 @@ int main(void)
 
     while (1)
     {
-        // Check karein ki counter 10 tak pahuncha hai ya nahi
+        // Check whether the counter has reached 10 or not
         if (counter <= 10)
         {
-            gpio_toggle(); // LED blink hogi
+            gpio_toggle(); // LED blink h
 
             sprintf(buffer, "Counter = %lu\r\n", counter++);
             uart_print(buffer);
@@ -32,8 +32,10 @@ int main(void)
         }
         else
         {
-            // 10 ke baad print ruk jayega, LED toggle band ho jayegi
-            // Agar aap chahte hain ki ginti phir se shuru ho, toh yahan counter = 0; likh sakte hain
+            // After reaching 10, the printing will stop and the LED toggling will stop.
+           // If you want the counter to start again, you can set counter = 0 here.
+
+
         }
     }
 }
